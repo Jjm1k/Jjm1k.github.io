@@ -1,0 +1,103 @@
+/* Fonts start*/
+
+/* font-family: 'Hind Madurai', sans-serif;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif; */
+
+/* Fonts end */
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    cursor: url('images/dot_cursor-01.png'), auto;
+}
+
+body {
+    background-color: #192242;
+    color: #EBF5EE;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: auto;
+    height: 4000px;
+    background-color: #23305d;
+}
+
+.container_grid {
+    display: grid;
+    grid-template-areas: 
+    'section section image'
+    'header header header'
+    'footer footer footer'
+}
+
+.nav_sticky {
+    position: sticky;
+    top: 0px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+    padding: 10px 0px;
+    top: 0px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #23305d;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+nav img:hover {
+    border-radius: 10px;
+    transition: 1s;
+    transition-timing-function: ease-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
+
+nav ul li {
+    list-style-type: none;
+    font-weight: 400;
+    float: left;
+    margin-left: 50px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+nav ul li:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #a8cfe6;    
+}
+
+h1 {
+    text-align: center;
+    color: #a8cfe6;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    padding: 20px;
+}
+
+.section {
+    height: 300px;
+    background-color: #BFA89E;
+    display: grid;
+}
+
+/* Jump to sections */
+
+#home {
+    position: absolute;
+    top: 0px;
+}
