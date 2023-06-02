@@ -1,16 +1,14 @@
-/* Fonts start*/
+/* Fonts Reference Start*/
 
 /* font-family: 'Hind Madurai', sans-serif;
 font-family: 'Lora', serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Playfair Display', serif; */
+font-family: 'Montserrat', sans-serif; */
 
-/* Fonts end */
+/* Fonts Reference End */
 
 * {
     box-sizing: border-box;
     margin: 0px;
-    cursor: url('images/dot_cursor-01.png'), auto;
 }
 
 body {
@@ -21,17 +19,16 @@ body {
 .wrapper {
     max-width: 1200px;
     margin: auto;
-    height: 4000px;
+    height: auto;
     background-color: #23305d;
+    contain: content;
 }
 
-.container_grid {
-    display: grid;
-    grid-template-areas: 
-    'section section image'
-    'header header header'
-    'footer footer footer'
+p {
+    font-family: 'Hind Madurai', sans-serif;
 }
+
+/* Navigation Start */
 
 .nav_sticky {
     position: sticky;
@@ -57,6 +54,7 @@ nav img:hover {
     border-radius: 10px;
     transition: 1s;
     transition-timing-function: ease-out;
+    opacity: 40%;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
 }
@@ -73,6 +71,7 @@ nav ul li {
 nav ul li:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 10px;
+    opacity: 40%;
     transition: 1s;
 }
 
@@ -81,23 +80,229 @@ nav ul li a {
     color: #a8cfe6;    
 }
 
+/* Navigation End */
+
+/* H Tags Start */
 h1 {
     text-align: center;
-    color: #a8cfe6;
+    color: #eee;
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     padding: 20px;
 }
 
-.section {
-    height: 300px;
-    background-color: #BFA89E;
-    display: grid;
+h2 {
+    font-family: 'Lora', serif;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
 }
 
-/* Jump to sections */
+h3 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-family: 'Hind Madurai', sans-serif;
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* H Tags End */
+
+/* Sections Start */
+
+section {
+    height: auto;
+    width: 100%;
+}
+
+/* About Section Start */
+
+.section--about {
+    display: grid;
+    grid-template-areas: 
+    'about--photo about--photo about--content about--space about--space about--space'
+    ;
+    padding: 25px;
+}
+
+.about--space {
+    grid-area: about--space;
+}
+
+.about--photo {
+    height: 450px;
+    margin: auto;
+    grid-area: about--photo;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.about--content {
+    grid-area: about--content;
+    font-family: 'Hind Madurai', sans-serif;
+    padding: 20px;
+    background-color: #192242;
+    height: 450px;
+    width: 320px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.about--content p {
+    color: #aaa;
+}
+
+.about--content a {
+    text-decoration: none;
+    color: #a8cfe6;
+    float: left;
+}
+
+.about--content a:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 10px;
+    opacity: 40%;
+    transition: 1s;
+}
+
+.about--content ul {
+    color: #a8cfe6;
+}
+
+/* About Section End */
+
+/* Projects Section Start */
+
+.section--projects {
+    display: grid;
+    gap: 1rem;
+    padding: 20px;
+    grid-template-areas: 
+    'project--1 project--1'
+    'project--2 project--3'
+    ;
+}
+
+.portfolio--h2 {
+    padding: 20px;
+}
+
+
+.project {
+    padding: 3em;
+    background: #192242;
+    color: white;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.project--1 {
+    grid-area: project--1;
+}
+.project--2 {
+    grid-area: project--2;
+}
+.project--3 {
+    grid-area: project--3;
+}
+
+.project img {
+    width: 400px;
+    display: block;
+    margin: auto;
+}
+
+.project p {
+    padding-top: 10px;
+}
+
+.project a {
+    color: #eee;
+}
+
+/* Projects Section End */
+
+/* Sections End */
+
+
+/* Footer Start */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    background-color: #23305d;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px -8px 4px, rgba(0, 0, 0, 0.09) 0px -4px 2px, rgba(0, 0, 0, 0.09) 0px -2px 1px, rgba(0, 0, 0, 0.09) 0px -16px 8px, rgba(0, 0, 0, 0.09) 0px -32px 16px;
+}
+
+/* Footer End */
+
+/* Jump To Part Of Page Start */
 
 #home {
     position: absolute;
     top: 0px;
 }
+#about {
+    position: absolute;
+    top: 80px;
+}
+#portfolio {
+    position: absolute;
+    top: 582px;
+}
+
+/* Jump To Part Of Page End */
+
+/* Media Queries start */
+
+@media only screen and (max-width: 750px) {
+    .section--about {
+        display: grid;
+        grid-template-areas: 
+        'about--photo'
+        'about--photo'
+        'about--content'
+        ;
+        margin-left: 30px;
+    }
+
+    .section--about img {
+        margin-bottom: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .section--projects {
+        display: grid;
+        gap: 1rem;
+        padding: 20px;
+        grid-template-areas: 
+        'project--1'
+        'project--2'
+        'project--3'
+        ;
+        margin-right: 20px;
+    }
+
+    .section--about img {
+        margin-bottom: 20px;
+    }
+
+    #portfolio {
+        position: absolute;
+        top: 1051px;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    #portfolio {
+        position: absolute;
+        top: 581px;
+    }
+  }
